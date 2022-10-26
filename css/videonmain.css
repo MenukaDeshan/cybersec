@@ -1,0 +1,511 @@
+@font-face {
+  font-family: "hacked";
+  src: url(font/Martyric_PersonalUse.ttf);
+}
+@font-face {
+  font-family: "nexa";
+  src: url(font/Nexa\ Light.otf);
+}
+@font-face {
+  font-family: "unithin";
+  src: url(font/Nexa\ Light.otf);
+}
+@font-face {
+  font-family: "mango";
+  src: url(font/Mangosteen.otf);
+}
+@font-face {
+  font-family: "masi";
+  src: url(font/Masiku.otf);
+}
+@font-face {
+  font-family: "robotob";
+  src: url(font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "a";
+  src: url(font/Market_Deco.ttf);
+}
+@font-face {
+  font-family: "1";
+  src: url(font/Fifties\ Movies.ttf);
+}
+@font-face {
+  font-family: "bad";
+  src: url(font/Bad_Signal.otf);
+}
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+body{
+  font-family: 'Rajdhani', sans-serif;
+}
+
+html,body {
+width: 100%;
+overflow-x: hidden;
+}
+  
+  /* home section */
+  header
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 60px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 29, 29);
+  }
+
+  header .logo
+  {
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+    font-family: "bad";
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  header .logo a:hover{
+    color: rgb(247, 1, 1);
+  }
+  .menu ul
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 130px;
+  }
+  .menu ul li
+  {
+    list-style: none;
+    margin-left: 30px;
+  }
+  .menu ul li a
+  {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 15px;
+    font-size: 12px;
+    font-family: nexa;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+  
+  }
+  .menu ul li a:hover
+  {
+    color: #f40303;
+  }
+
+  #home{
+    background-image: url(../img/bg/bgv.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #FFFFFF;
+    background-color: #111;
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 650px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+.ytvideo-main{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    margin-left: 220px;
+    display: flex;
+}
+
+.ytvideo-main iframe{
+  display: block; 
+  margin: 0 auto;
+  width:800px;
+  height: 455px;
+}
+
+.ytvideo-main .ytmain-text{
+  color: #fff;
+  text-align: left;
+  margin-right: 500px;
+  margin-left: 40px;
+  padding: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+.ytvideo-main .ytmain-text h1{
+  font-size: 35px;
+  font-family: 'a';
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #2bff00;
+}
+.ytvideo-main .ytmain-text p{
+  font-size: 20px;
+  color: #f1eeee;
+  text-transform: uppercase;
+}
+
+/* video section */
+
+.video-gallery{
+    justify-content: center;
+    padding: 40px;
+    background-color: #111;
+}
+.video-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.image{
+    position: relative;
+    width: 500px;
+    margin: 10px 10px;
+
+}
+.image-img{
+    display: block;
+    width: 100%;
+}
+.play-btn{
+    width: 100%;
+    align-items: center;
+  
+}
+.btn-img{
+    width: 60px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-img:hover{
+    cursor: pointer;
+    filter: invert(52%) sepia(32%) saturate(3582%) hue-rotate(91deg) brightness(119%) contrast(118%);
+}
+.image-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.829);
+    color: aliceblue;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.image-overlay > * {
+    transition: transform 0.25s;
+}
+
+.image-overlay:hover{
+    opacity: 1;
+}
+.image-overlay:hover > * {
+    transform: translateY(0px);
+}
+
+.image-title{
+    font-size: 20px;
+    font-family: "robotob";
+    color: #2bff00;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateY(35px);
+    position: absolute;
+    bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/*-----scale home---*/
+@media(max-width:1700px){
+  header .logo
+  {
+    font-size: 40px;
+  }
+  #home{
+    min-height: 550px;
+  }
+  .ytvideo-main{
+    margin-top: 40px;
+    margin-left: 160px;
+    display: flex;
+}
+
+.ytvideo-main iframe{
+  width:600px;
+  height: 350px;
+}
+
+.ytvideo-main .ytmain-text{
+ 
+  margin-right: 400px;
+  margin-left: 40px;
+}
+.ytvideo-main .ytmain-text h1{
+  font-size: 30px;
+}
+.ytvideo-main .ytmain-text p{
+  font-size: 15px;
+}
+}
+
+
+@media(max-width:1200px){
+  header{
+    padding-left: 20px;
+  }
+  header .logo
+  {
+    font-size: 30px;
+  }
+  .menu ul li a
+  {
+    font-size: 12px;
+  }
+  #home{
+    min-height: 450px;
+  }
+  .ytvideo-main{
+    margin-top: 10px;
+    margin-left: 100px;
+    display: flex;
+}
+
+.ytvideo-main iframe{
+  width:600px;
+  height: 300px;
+}
+
+.ytvideo-main .ytmain-text{
+ 
+  margin-right: 200px;
+  margin-left: 40px;
+}
+.ytvideo-main .ytmain-text h1{
+  font-size: 30px;
+}
+.ytvideo-main .ytmain-text p{
+  font-size: 15px;
+}
+}
+
+@media (max-width: 900px){
+  header{
+    padding-left: 20px;
+  }
+  header .logo
+  {
+    font-size: 30px;
+  }
+  .menu ul li a
+  {
+    font-size: 12px;
+  }
+  #home{
+    min-height: 400px;
+  }
+  .ytvideo-main{
+    margin-top: 40px;
+    margin-left: 70px;
+    display: flex;
+}
+
+.ytvideo-main iframe{
+  width:500px;
+  height: 250px;
+}
+
+.ytvideo-main .ytmain-text{
+ 
+  margin-right: 120px;
+  margin-left: 30px;
+}
+.ytvideo-main .ytmain-text h1{
+  font-size: 20px;
+}
+.ytvideo-main .ytmain-text p{
+  font-size: 10px;
+}
+}
+
+
+@media(max-width:550px){
+  header{
+    padding-left: 20px;
+  }
+  header .logo
+  {
+    font-size: 12px;
+  }
+  .menu ul li a
+  {
+    font-size: 7px;
+  }
+  .menu ul
+  {
+    padding-right: 20px;
+  }
+  .menu ul li
+  {
+    margin-left: 7px;
+  }
+  #home{
+    min-height: 300px;
+  }
+  .ytvideo-main{
+    margin-top: 40px;
+    margin-left: 70px;
+    display: flex;
+}
+
+.ytvideo-main iframe{
+  width:400px;
+  height: 200px;
+}
+
+.ytvideo-main .ytmain-text{
+ 
+  margin-right: 80px;
+  margin-left: 30px;
+  padding: 10px 10px;
+}
+.ytvideo-main .ytmain-text h1{
+  font-size: 15px;
+}
+.ytvideo-main .ytmain-text p{
+  font-size: 8px;
+}
+}
+
+/*-----scale videosec---*/
+@media(max-width:1700px){
+  .video-gallery{
+    padding: 30px;
+}
+  .video-content{
+    margin-top: 40px;
+  }
+  .image{
+      width: 400px;
+  }
+
+  .btn-img{
+      width: 50px;
+  }
+  
+  .image-title{
+      font-size: 12px;
+      bottom: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+  }
+  
+}
+@media(max-width:1500px){
+  .image{
+      width: 350px;
+  }
+  .image-title{
+    bottom: 25px;
+}
+
+}
+
+@media(max-width:1200px){
+  .video-gallery{
+    padding: 30px;
+}
+  .video-content{
+    margin-top: 40px;
+  }
+  .image{
+      width: 300px;
+  }
+
+  .btn-img{
+      width: 35px;
+  }
+  
+  .image-title{
+      font-size: 10px;
+      bottom: 30px;
+      padding-left: 40px;
+      padding-right: 40px;
+  }
+}
+
+@media (max-width: 900px){
+  .video-gallery{
+    padding: 30px;
+}
+  .video-content{
+    margin-top: 40px;
+  }
+  .image{
+      width: 250px;
+  }
+
+  .btn-img{
+      width: 35px;
+  }
+  
+  .image-title{
+      bottom: 20px;
+  }
+}
+
+
+@media(max-width:550px){
+  .video-gallery{
+    padding: 30px;
+}
+  .video-content{
+    margin-top: 40px;
+  }
+  .image{
+      width: 420px;
+  }
+
+  .btn-img{
+      width: 50px;
+  }
+  
+  .image-title{
+      font-size: 13px;
+      bottom: 40px;
+  }
+}

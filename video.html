@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Security</title>
+    <link rel="icon" type="image/png" href="img/logo2.png" />
+    <link rel="stylesheet" href="css/videonmain.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel='stylesheet' href='css/fontAwesome.css'>
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+    <script src="js/popup.js"></script>
+</head>
+<body>
+    <!-- home section -->
+    <section id="home">
+        <header class="navbar">
+            <h2 class="logo"><a href="index.html">CyberSec</a></h2>
+            <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://www.youtube.com/channel/UCMYATFoa1kAdfQzl4rxyYCw">SUBSCRIBE</a></li>
+            </ul>
+            </div>
+        </header>
+        <div class="ytvideo-main">
+            <iframe src="https://www.youtube.com/embed/Dk-ZqQ-bfy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            <div class="ytmain-text">
+                <h1>Recent Video</h1>
+                <p>8 Most Common Cybersecurity Threats | Types of Cyber Attacks</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- video section -->
+    <section class="video-gallery">
+       
+        <div class="video-content">
+            
+            <!-----Video 01------>
+            <div class="image">
+                <img class="image-img" src="img/vsec/3v.jpg">
+                <div class="image-overlay">
+                    <div class="play-btn">
+                        <img class="btn-img" src="img/playbtn.png" onclick="youtubePopup2.showPopup();">
+                    </div>
+                    <div class="image-title">8 Most Common Cybersecurity Threats | Types of Cyber Attacks</div>
+                </div>
+            </div>
+    
+                <!-----Video 01------>
+            <div class="image">
+                <img class="image-img" src="img/vsec/vwih.png" alt="">
+                <div class="image-overlay">
+                    <div class="play-btn">
+                        <img class="btn-img" src="img/playbtn.png" onclick="youtubePopup.showPopup();">
+                    </div>
+                    <div class="image-title">A PLAGUE TALE INNOCENCE Walkthrough Gameplay Part 17</div>
+                </div>
+            </div>
+            
+            
+                <!-----Video 01------>
+                <div class="image">
+                    <img class="image-img" src="img/vsec/2v.jpg" alt="">
+                    <div class="image-overlay">
+                        <div class="play-btn">
+                            <img class="btn-img" src="img/playbtn.png" onclick="youtubePopup1.showPopup();">
+                        </div>
+                        <div class="image-title">A PLAGUE TALE INNOCENCE Walkthrough Gameplay Part 16</div>
+                    </div>
+                </div>
+    
+            <!-----Video 01------>
+            <div class="image">
+                <img class="image-img" src="img/vsec/4v.jpg" alt="">
+                <div class="image-overlay">
+                    <div class="play-btn">
+                        <img class="btn-img" src="img/playbtn.png" onclick="youtubePopup4.showPopup();">
+                    </div>
+                    <div class="image-title">What is Phishing?</div>
+                </div>
+            </div>      
+               
+             <!-----Video 01------>
+            <div class="image">
+                <img class="image-img" src="img/vsec/5v.png" alt="">
+                <div class="image-overlay">
+                    <div class="play-btn">
+                        <img class="btn-img" src="img/playbtn.png" onclick="youtubePopup5.showPopup();">
+                    </div>
+                    <div class="image-title">Email Phishing Scams</div>
+                </div>
+            </div>      
+               
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">CyberSec</h2>
+                <p class="footer__text">Cyber security is a discipline that covers how to defend 
+                    devices and services from electronic attacks by nefarious actors such as hackers, 
+                    spammers, and cybercriminals. </p>
+            </div>
+    
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li>
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                    <li><a href="#Contact" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="#" class="footer__social"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="footer__social"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="footer__social"><i class="fa fa-github"></i></a>
+                <a href="#" class="footer__social"><i class="fa fa-youtube-play"></i></a>
+                <a href="#" class="footer__social"><i class="fa fa-twitter"></i></a>
+            </div>
+    
+    
+        </div>
+    </footer>
+
+    <script>
+        var youtubePopup = new LandingPagePopup("https://www.youtube.com/embed/C6AEs1ll1PQ");
+        var youtubePopup1 = new LandingPagePopup("https://www.youtube.com/embed/TCwHfFu0R_E");
+        var youtubePopup2 = new LandingPagePopup("https://www.youtube.com/embed/Dk-ZqQ-bfy4");
+        var youtubePopup4 = new LandingPagePopup("https://www.youtube.com/embed/XBkzBrXlle0");
+        var youtubePopup5 = new LandingPagePopup("https://www.youtube.com/embed/yxlR1st8QKI");
+    </script>
+
+
+
+</body>
+</html>

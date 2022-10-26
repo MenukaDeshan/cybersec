@@ -1,0 +1,166 @@
+body.no-scroll {
+    overflow-y: hidden;
+}
+
+.landing-page--popup-container[aria-hidden="true"]{
+  z-index: -10000000;
+  top: -1000vh;
+  position: fixed;
+}
+
+.landing-page--popup-container[aria-hidden="false"]{
+/*.landing-page--popup-container{*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+  display: grid;
+  z-index: 10000000;
+}
+
+.inner-landing-page--video-popup{
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  max-width: min(93vw, 1280px);
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+ 
+
+.close-popup--btn {
+  background: #9f9f9f;
+  width: 5em;
+  height: 5em;
+  font-size: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  text-align: center;
+  display: grid;
+  z-index: 1;
+}
+
+
+
+.youtube-video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.youtube-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.html-popup-content--container{
+  outline: 1px solid #f00;
+  background:  #fff;
+  padding:  30px;
+}
+
+
+/* == Popup Close Icon Text == */
+
+.landing-page--popup-container .close-popup--icon {
+  place-self: center;
+  position: relative;
+  font-size: 20px;
+}
+
+.landing-page--popup-container .close-popup--icon::before,
+.landing-page--popup-container .close-popup--icon::after {
+  content: " ";
+  font-size: 1em;
+  height: 1em;
+  width: .1em;
+  background: #222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.landing-page--popup-container .close-popup--icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.landing-page--popup-container  .screen-reader-text{
+  position: fixed;
+  top:  100vh;
+}
+
+
+
+/* == Loading Text == */
+
+.landing-page--popup__loading{
+  font-family: sans-serif;
+  color:  #fff; 
+  position:  absolute;
+  top:  50%;
+  left:  50%;
+  transform: translate(-50%,-50%);
+  font-size: 10px;
+  padding:  1em;
+
+}
+
+.landing-page--popup__dot-animation{
+  font-size: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing-page--popup__dot-animation > div{
+  position: relative;
+  width: 100%; 
+  height:  2em;
+}
+
+.landing-page--popup__dot{
+  font-size:  1em;
+  width:  1em;
+  height:  1em;
+  background: #fff;
+  border-radius: 50%; 
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.landing-page--popup__loading-text{
+  padding-top: 1em;
+}
+
+.landing-page--popup__dot-1{
+  animation: dotsGoUp .5s 0s infinite alternate ;
+}
+
+.landing-page--popup__dot-2{
+  animation: dotsGoUp .5s .25s infinite alternate ;
+}
+.landing-page--popup__dot-3{
+  animation: dotsGoUp .5s .5s infinite  alternate;
+}
+
+@keyframes dotsGoUp{
+  0%{bottom:  0}
+  100%{bottom: 1em;} 
+}
+
